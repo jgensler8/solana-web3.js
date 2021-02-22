@@ -45,6 +45,9 @@
     "/module.flow.js",
     "/src"
   ],
+  "watch": {
+    "build": "src/*.js"
+  },
   "scripts": {
     "bpf-sdk:install": "npm run clean:fixtures; bin/bpf-sdk-install.sh .",
     "bpf-sdk:remove-symlinks": "find bpf-sdk -type l -print -exec cp {} {}.tmp \\; -exec mv {}.tmp {} \\;",
@@ -92,6 +95,7 @@
     "jayson": "^3.4.4",
     "js-sha3": "^0.8.0",
     "node-fetch": "^2.6.1",
+    "npm-watch": "^0.7.0",
     "rpc-websockets": "^7.4.2",
     "secp256k1": "^4.0.2",
     "superstruct": "^0.8.3",

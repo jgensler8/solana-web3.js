@@ -147,8 +147,8 @@ function generateConfig(configType, format) {
 
 export default [
   generateConfig('node'),
-  generateConfig('browser', 'esm'),
-  generateConfig('browser', 'iife'),
+  // generateConfig('browser', 'esm'),
+  // generateConfig('browser', 'iife'),
 ];
 
 // Using this instead of rollup-plugin-flow due to

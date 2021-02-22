@@ -509,7 +509,7 @@ export class Transaction {
   _partialSign(message: Message, ...signers: Array<Account>) {
     const signData = message.serialize();
     signers.forEach(signer => {
-      const signature = nacl.sign.detached(signData, signer.secretKey);
+      const signature = nacl.sign.detached(Uint8Array.from(signData), signer.secretKey);
       this._addSignature(signer.publicKey, signature);
     });
   }
@@ -558,7 +558,7 @@ export class Transaction {
         }
       } else {
         if (
-          !nacl.sign.detached.verify(signData, signature, publicKey.toBuffer())
+          !nacl.sign.detached.verify(Uint8Array.from(signData), Uint8Array.from(signature), Uint8Array.from(publicKey.toBuffer()))
         ) {
           return false;
         }
