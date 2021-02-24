@@ -10,7 +10,7 @@
  *
  */
 
-declare module 'solana-react-web3.js' {
+declare module 'solana-react-web3-js' {
   import typeof {Buffer} from 'buffer';
   import typeof * as BufferLayout from 'buffer-layout';
 
