@@ -25,7 +25,7 @@
       "option": {
         "stripPackageName": true,
         "replaces": [
-          {"from": ".*", "to": "@solana/web3"}
+          {"from": ".*", "to": "solana-react-web3.js"}
         ]
       }
     },
